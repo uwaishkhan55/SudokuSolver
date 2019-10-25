@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>HTML Sudoku Board</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+              crossorigin="anonymous"></script>
+              
+   
+    
+
+
+
+
+    <style type="text/css">
+    
+      html, body {
+        background-color: #FAFAFA
+      }
+      table {
+        border: 2px solid #000000;
+      }
+      td {
+        border: 1px solid #000000;
+        text-align: center;
+        vertical-align: middle;  
+      }
+      #div{
+         padding: 1px;
+         margin: 20px;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         }
+         h1{
+             text-align: center;
+         }
+      input {
+        color: #000000;
+        padding: 0;
+        border: 0;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        background-color: #FFFFFF;
+        outline: none;
+      }
+      td:first-child {
+  border-left:solid;
+}
+td:nth-child(3n) {
+  border-right:solid ;
+}
+tr:first-child {
+  border-top:solid;
+}
+tr:nth-child(3n) td {
+  border-bottom:solid ;
+}
+button{
+    display: block;
+    margin: 0 auto;
+}
+    
+    </style>
+    </head>
+  <body>
+        <h1 >HTML Sudoku Board</h1>
+       <div id="div">
+       <table id="grid">
+
+        <tr>
+          <td><input id="cell-0"  type="number" min=0 max=9></td>
+          <td><input id="cell-1"  type="number" min=0 max=9></td>
+          <td><input id="cell-2"  type="number" min=0 max=9></td>
+          
+          <td><input id="cell-3"  type="number" min=0 max=9></td>
+          <td><input id="cell-4"  type="number" min=0 max=9></td>
+          <td><input id="cell-5"  type="number" min=0 max=9></td>
+          
+          <td><input id="cell-6"  type="number" min=0 max=9></td>
+          <td><input id="cell-7"  type="number" min=0 max=9></td>
+          <td><input id="cell-8"  type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>
+          <td><input id="cell-9"  type="number" min=0 max=9></td>
+          <td><input id="cell-10" type="number" min=0 max=9></td>
+          <td><input id="cell-11" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-12" type="number" min=0 max=9></td>
+          <td><input id="cell-13" type="number" min=0 max=9></td>
+          <td><input id="cell-14" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-15" type="number" min=0 max=9></td>
+          <td><input id="cell-16" type="number" min=0 max=9></td>
+          <td><input id="cell-17" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-18" type="number" min=0 max=9></td>
+          <td><input id="cell-19" type="number" min=0 max=9></td>
+          <td><input id="cell-20" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-21" type="number" min=0 max=9></td>
+          <td><input id="cell-22" type="number" min=0 max=9></td>
+          <td><input id="cell-23" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-24" type="number" min=0 max=9></td>
+          <td><input id="cell-25" type="number" min=0 max=9></td>
+          <td><input id="cell-26" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-27" type="number" min=0 max=9></td>
+          <td><input id="cell-28" type="number" min=0 max=9></td>
+          <td><input id="cell-29" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-30" type="number" min=0 max=9></td>
+          <td><input id="cell-31" type="number" min=0 max=9></td>
+          <td><input id="cell-32" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-33" type="number" min=0 max=9></td>
+          <td><input id="cell-34" type="number" min=0 max=9></td>
+          <td><input id="cell-35" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-36" type="number" min=0 max=9></td>
+          <td><input id="cell-37" type="number" min=0 max=9></td>
+          <td><input id="cell-38" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-39" type="number" min=0 max=9></td>
+          <td><input id="cell-40" type="number" min=0 max=9></td>
+          <td><input id="cell-41" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-42" type="number" min=0 max=9></td>
+          <td><input id="cell-43" type="number" min=0 max=9></td>
+          <td><input id="cell-44" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-45" type="number" min=0 max=9></td>
+          <td><input id="cell-46" type="number" min=0 max=9></td>
+          <td><input id="cell-47" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-48" type="number" min=0 max=9></td>
+          <td><input id="cell-49" type="number" min=0 max=9></td>
+          <td><input id="cell-50" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-51" type="number" min=0 max=9></td>
+          <td><input id="cell-52" type="number" min=0 max=9></td>
+          <td><input id="cell-53" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-54" type="number" min=0 max=9></td>
+          <td><input id="cell-55" type="number" min=0 max=9></td>
+          <td><input id="cell-56" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-57" type="number" min=0 max=9></td>
+          <td><input id="cell-58" type="number" min=0 max=9></td>
+          <td><input id="cell-59" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-60" type="number" min=0 max=9></td>
+          <td><input id="cell-61" type="number" min=0 max=9></td>
+          <td><input id="cell-62" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-63" type="number" min=0 max=9></td>
+          <td><input id="cell-64" type="number" min=0 max=9></td>
+          <td><input id="cell-65" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-66" type="number" min=0 max=9></td>
+          <td><input id="cell-67" type="number" min=0 max=9></td>
+          <td><input id="cell-68" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-69" type="number" min=0 max=9></td>
+          <td><input id="cell-70" type="number" min=0 max=9></td>
+          <td><input id="cell-71" type="number" min=0 max=9></td>
+        </tr>
+
+        <tr>          
+          <td><input id="cell-72" type="number" min=0 max=9></td>
+          <td><input id="cell-73" type="number" min=0 max=9></td>
+          <td><input id="cell-74" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-75" type="number" min=0 max=9></td>
+          <td><input id="cell-76" type="number" min=0 max=9></td>
+          <td><input id="cell-77" type="number" min=0 max=9></td>
+          
+          <td><input id="cell-78" type="number" min=0 max=9></td>
+          <td><input id="cell-79" type="number" min=0 max=9></td>
+          <td><input id="cell-80" type="number" min=0 max=9></td>
+        </tr>
+
+       </table>
+
+    </div>
+    <button id="b1">
+        Solve
+    </button>
+
+  </body>
+  <script>
+          const _board = [
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+];
+        $('#b1').click(()=>{
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    str="#cell-"+(i*9+j)
+                     let a= $(str).val(); 
+                     if(!isNaN(parseInt(a))) _board[i][j]=a;
+                    
+        }}
+        sodokoSolver(_board);
+        for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    str="#cell-"+(i*9+j)
+                  $(str).val(_board[i][j]); 
+                     
+                    
+        }}
+        console.log(_board);
+        })
+
+function isValid(board, row, col, k) {
+    for (let i = 0; i < 9; i++) {
+        let m = 3 * Math.floor(row / 3) + Math.floor(i / 3);
+        let n = 3 * Math.floor(col / 3) + i % 3;
+        if (board[row][i] == k || board[i][col] == k || board[m][n] == k) {
+          return false;
+        }
+    }
+    return true;
+}
+
+
+function sodokoSolver(data) {
+  for (let i = 0; i < 9; i++) 
+  {
+    for (let j = 0; j < 9; j++)
+    {
+      if (data[i][j] == '.')
+       {
+        for (let k = 1; k <= 9; k++)
+         {
+          if (isValid(data, i, j, k)) 
+          {
+               
+                 data[i][j] = `${k}`;
+                 if (sodokoSolver(data))
+                  {
+                          return true;
+                  }
+                else
+                  {
+                    data[i][j] = '.';
+                  }
+         }
+       }
+       return false;
+     }
+   }
+ }
+ return true;
+}
+      
+    </script>
+</html>
